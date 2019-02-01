@@ -1,12 +1,15 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'searchArtists'
+  name: "searchArtists"
 })
 export class SearchArtistsPipe implements PipeTransform {
-
-  transform(value: any, args?: any): any {
-    return null;
+  transform(pipeData, pipeModifier): any {
+    return pipeData.filter(eachItem => {
+      return (
+        eachItem["name"].toLowerCase().includes(pipeModifier.toLowerCase()) ||
+        eachItem["reknown"].toLowerCase().includes(pipeModifier.toLowerCase())
+      );
+    });
   }
-
 }

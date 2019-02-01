@@ -16,7 +16,12 @@
           <div class="form-label" *ngIf="query">
             <strong>For:</strong> {{query}}
           </div>
-          <input class="form-control mt-2" type="text" [(ngModel)]="query" />
+          <input
+            class="form-control mt-2"
+            type="text"
+            placeholder="type name here"
+            [(ngModel)]="query"
+          />
         </div>
         <!-- form-group -->
       </div>

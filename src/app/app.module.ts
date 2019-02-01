@@ -4,9 +4,10 @@ import { FormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
 import { AppComponent } from "./app.component";
+import { ArtistItemsComponent } from './artist-items/artist-items.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ArtistItemsComponent],
   imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
